@@ -6,6 +6,10 @@ const color = require('./lib/color')
 const figlet = require('figlet')
 const lolcatjs = require('lolcatjs')
 const fs = require("fs")
+const yargs = require('yargs/yargs')
+global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
+
+if (opts['server']) require('./server')
 
 //Thanks To Nurutomo And Tobz
 require('./message/ichi.js')
