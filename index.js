@@ -36,6 +36,9 @@ nocache('./message/ichi.js', module => console.log(`'${module}' Updated!`))
         })
     
         sock.ev.on('connection.update', (update) => {
+        	if (global.qr !== update.qr) {
+            global.qr = update.qr
+        }
                         const { connection, lastDisconnect } = update
             if (connection === 'close') {
           
