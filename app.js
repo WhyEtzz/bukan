@@ -27,5 +27,5 @@ const qrPrint = (qr) => {
 // Run the server
 const PORT = 3000
 httpServer.listen(PORT, () => {
-    console.log(color('[INFO] Web api Server on port: ', 'green') + color(`${PORT}`, 'yellow'))
+    console.log('[INFO] Web api Server on port ' + PORT)
 })
