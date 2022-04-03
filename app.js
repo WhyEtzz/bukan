@@ -18,7 +18,7 @@ app.get('/', async (req, res, next) => {
 })
 
 const qrPrint = (qr) => {
-    app.get('/qr', async (req, res) => {
+    app.get('/', async (req, res) => {
         res.setHeader("content-type", "image/png")
         res.send(await resizeImage(await qrcode.toBuffer(qr), 512, 512))
     })
