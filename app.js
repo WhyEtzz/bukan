@@ -3,7 +3,7 @@ const http = require('http')
 const app = express()
 const httpServer = http.createServer(app)
 const qrcode = require('qrcode')
-const { resizeImage } = require('./lib/converter') 
+const { resizeImage } = require('./lib/function') 
 global.qr = ' '
 
 app.set('json spaces', 2);
